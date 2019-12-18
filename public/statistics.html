@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget_Statistics</title>
+    <link rel="stylesheet" href="./css/statisticsStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+      <h1>Balance-Statistics</h1>
+      <div id="Nav">  <a href="/"><button>Home <i class="fas fa-home"></i> </button></a>
+        <a href="/history.html"><button>History <i class="fas fa-history"></i></button></a>
+        <a href="/statistics.html"><button>Statistics <i class="fas fa-chart-bar"></i></button></a>
+    </div>
+
+      <div class="dateInputs">
+          <h2>Select Date and Time</h2>
+          <label for="start">Start Time/Date:</label>
+          <input type="datetime-local" name="" id="start">
+
+          <label for="end">End Time/Date:</label>
+          <input type="datetime-local" name="" id="end">
+         <button id="submitBtn" onclick="getStatisticsHandler()">Get statistics</button>
+          <p><span id="chosenDates">Chosen Dates Balance :</span>  <span id="balanceDisplay">0</span></p>
+
+          <div id="displayStat">
+        <div class="IncExpTotal">
+
+                <div class="incomeSum"><span class="currentamount">INCOMES</span><span id="incomeAmount">+0.00</span></div>
+                <div class="expensesSum"><span class="currentamount">EXPENSES</span>
+                  <span id="expenseAmount">-0.00</span></div></div>
+       </div>
+                <table id="incomeTable">
+                        <tr>
+                          <th>Operation</th>
+                          <th>Type</th>
+                          <th>Date</th>
+                          <th>Description</th>
+                          <th>Amount</th>
+                        </tr>
+                    </table>
+
+          </div>
+          <div id="dateTimeError">
+              <i onclick="deleteErrorMessage()" class="fas fa-times-circle"></i> 
+            <p><strong>Note:</strong> Validation error Make sure you enter Time and Date.</p>
+          </div>
+      </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./javaScript/statisticsJs.js"></script>
+</body>
+</html>
