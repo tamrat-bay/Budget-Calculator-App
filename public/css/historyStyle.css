@@ -212,10 +212,10 @@ text-shadow: 2p 2px black;
 
 @media only screen and (max-width: 507px) {
     h1 {
-        text-shadow: 2px 2px white;
-        color: #353535;
-        border: 3px solid #e4caca5c;
-        margin: 10px auto;
+        text-shadow: 2px 2px black;
+        color: #f3f3f3;
+        border: 3px solid #5858585c;
+        margin: 0px auto;
         width: 320px;
         box-shadow: 1px 1px 14px white;
         font-size: 2.2em;
