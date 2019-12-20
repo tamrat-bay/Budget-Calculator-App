@@ -17,7 +17,7 @@ let incomes =[],
       if (response.status == 200) {
            let data = response.data,
             url= response.config.url; 
-            console.log(data);
+            // console.log(data);
                      table.innerHTML = `<tr>
                           <th>Operation</th>
                           <th>Type</th>
@@ -28,7 +28,6 @@ let incomes =[],
                 
             data.forEach(val => {
                 if (endDateValidation(endDate.value,val.date,'end') && endDateValidation(start.value,val.date,'start')) {                    
-                    console.log('dates match');
                     if (val.type == 'incomes') {
                         incomes.push(val); }
 
@@ -109,7 +108,6 @@ function endDateValidation(startOrDndDate,listDates,type){
 
 
           if (type == 'start') {    
-              console.log( 'start');
        // !compare years 
        if (Number(dateFromList[0]) > Number(startOrEndDate[0])) {
         return true;
@@ -152,17 +150,16 @@ expensesTotal =expArrObj.reduce((total,val) => total+val.amount ,0),
 balance =  incomesTotal -expensesTotal;
 document.querySelector('#incomeAmount').innerHTML = incomesTotal;
 document.querySelector('#expenseAmount').innerHTML = expensesTotal;
-
  document.querySelector('#balanceDisplay').innerHTML = balance;
- document.querySelector('#chosenDates').innerHTML = `Budget Balance Between <strong>${date1}</strong>  and <strong> ${date2}</strong> is: `;
 }
 
 function displayOnTable(obj,table){
+    let dateTime = dateAndTimeElegantStructure(obj)
     table.innerHTML+= `
                     <tr>
                       <td>${obj.operation}</td>
                       <td>${obj.type}</td>
-                      <td>${obj.date}</td>
+                      <td>${dateTime}</td>
                       <td>${obj.description}</td>
                       <td>${obj.amount}</td>
                     </tr>`
@@ -173,3 +170,16 @@ function errorMessageDisplay(){
    function deleteErrorMessage(){
     document.querySelector('#dateTimeError').style.cssText = "display:none"
      }
+
+
+     function dateAndTimeElegantStructure(obj){
+        let date = obj.date.split('|'),
+        time = date[3].split(':');
+        if (time[0].length < 2) {
+          time[0] = '0'+time[0]
+        }
+        if (time[1].length < 2) {
+          time[1] = '0'+time[1]
+        }
+       return `${date[1]} - ${time[0]}:${time[1]}`;
+      }

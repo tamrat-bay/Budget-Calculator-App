@@ -1,18 +1,25 @@
 body{
-    background: linear-gradient(to right, #ff9191, #67e4d5d4);
+    background-color: rgb(233, 232, 232);
     font-family: 'Arvo', serif;
+    margin: 0;
+}
+.header{
+    background-image: url(../images/backgrnd.jpg);
+    background-position-y: 1105px;
+    height: 220px;
+    box-shadow: 0 2px 9px;
 }
 h1{
-    font-size: 3.5em;
-    letter-spacing: 17px;
-    color: snow;
-    text-shadow: 3px 3px 11px black;
-    background-color: #67d4d821;
-    width: 57%;
-    margin: 10 auto;
-    border-bottom: 2px solid white;
-    margin: 15px auto;
-    border-radius: 15px;
+    text-shadow: 2px 2px black;
+    color: #f3f3f3;
+    border: 3px solid #5858585c;
+    margin: 0px auto;
+    padding: 10px;
+    width: 478px;
+    box-shadow: 1px 1px 14px white;
+    font-size: 37px;
+    letter-spacing: 11px;
+
 }
 h2{
     font-size: 2em;
@@ -30,20 +37,19 @@ text-align: center;
 }
 table{
     border-collapse: collapse;
-border-collapse: collapse;
-margin: 75px auto;
-border: 2px groove black;
-border-radius: 13px;
-box-shadow: 0 0 9px black;
-width: 70%;
+    margin: 75px auto;
+    border: 2px groove black;
+    box-shadow: 0 0 9px black;
+    width: 70%;
+    background-color: #1a1616cf;
 }
 table td, th {
-text-align: center;
-border: 1px solid #dddddd;
-text-align: center;
-padding: 23px;
-font-size: 1.1em;
-color: black;
+    text-align: center;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 23px;
+    font-size: 1.1em;
+    color: white;
 }
 #Nav{
 position: relative;
@@ -71,11 +77,11 @@ text-shadow: 2p 2px black;
 font-size: 1.8em;
 }
 .dateInputs input{
-width: 225px;
-border-radius: 5px;
-height: 37px;
-font-size: large;
-background-color: #f0f0f0;
+    width: 225px;
+    border-radius: 5px;
+    height: 37px;
+    font-size: large;
+    background-color: #aec9c7;
 }
 .dateInputs label{
     font-size: 1.4em;
@@ -209,7 +215,7 @@ box-sizing: border-box;}
         border-radius: 5px;
         height: 37px;
         font-size: large;
-        background-color: #f0f0f0;
+    background-color: #aec9c7;
     }
     .dateInputs button {
         font-weight: 800;
@@ -267,19 +273,20 @@ box-sizing: border-box;}
             border-radius: 5px;
             height: 39px;
             font-size: 1.5em;
-            background-color: #f0f0f0;
+            background-color: #aec9c7;
         }
         h1{
             font-size: 3.5em;
-            letter-spacing: 17px;
-            color: snow;
-            text-shadow: 3px 3px 11px black;
-            background-color: #67d4d821;
             width: 90%;
-            margin: 10 auto;
-            border-bottom: 2px solid white;
-            margin: 15px auto;
-            border-radius: 15px;
+            text-shadow: 2px 2px black;
+            color: #f3f3f3;
+            border: 3px solid #5858585c;
+            margin: 0px auto;
+            padding: 10px;
+            width: 478px;
+            box-shadow: 1px 1px 14px white;
+            font-size: 37px;
+            letter-spacing: 11px;
         }
         .dateInputs p {
             font-size: 1.3em;
@@ -305,10 +312,11 @@ box-sizing: border-box;}
     }
     table {
         border-collapse: collapse;
-        margin: 50px auto;
-        border: 1px groove black;
+        margin: 75px auto;
+        border: 2px groove black;
         box-shadow: 0 0 9px black;
-        font-size: .8em;
+        width: 70%;
+        background-color: #1a1616cf;
     }
     .incomeSum, .expensesSum {
         width: 50%;
@@ -331,8 +339,8 @@ box-sizing: border-box;}
         text-align: center;
         padding: 13px;
         font-size: 1.3em;
-        color: black;
-    }
+        color: white;
+        }
     .incomeSum, .expensesSum {
         width: 80%;
         border-radius: 5px;
@@ -351,15 +359,16 @@ box-sizing: border-box;}
 @media only screen and (max-width: 512px) {
     h1 {
         font-size: 2.1em;
-        letter-spacing: 17px;
-        color: snow;
-        text-shadow: 3px 3px 11px black;
-        background-color: #67d4d821;
         width: 90%;
-        margin: 10 auto;
-        border-bottom: 2px solid white;
-        margin: 15px auto;
-        border-radius: 15px;
+        text-shadow: 2px 2px black;
+        color: #f3f3f3;
+        border: 3px solid #5858585c;
+        margin: 0px auto;
+        padding: 10px;
+        width: 478px;
+        box-shadow: 1px 1px 14px white;
+        font-size: 37px;
+        letter-spacing: 11px;
     }
     .incomeSum, .expensesSum {
         width: 75%;
@@ -376,7 +385,7 @@ box-sizing: border-box;}
         text-align: center;
         padding: 7px;
         font-size: 1em;
-        color: black;
+        color: white;
     }
     #Nav button {
         text-shadow: 2px 2px black;

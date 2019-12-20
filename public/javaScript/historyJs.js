@@ -26,12 +26,25 @@ axios.get(path)
 }
 
 function displayOnTable(obj,table){
+ let dateTime =dateAndTimeElegantStructure(obj)
 table.innerHTML+= `
                 <tr>
                   <td>${obj.operation}</td>
                   <td>${obj.type}</td>
-                  <td>${obj.date}</td>
+                  <td>${dateTime}</td>
                   <td>${obj.description}</td>
                   <td>${obj.amount}</td>
                 </tr>`
+}
+
+function dateAndTimeElegantStructure(obj){
+  let date = obj.date.split('|'),
+  time = date[3].split(':');
+  if (time[0].length < 2) {
+    time[0] = '0'+time[0]
+  }
+  if (time[1].length < 2) {
+    time[1] = '0'+time[1]
+  }
+ return `${date[1]} - ${time[0]}:${time[1]}`;
 }
