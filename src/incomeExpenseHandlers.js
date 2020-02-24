@@ -4,7 +4,7 @@ mongoose = require('mongoose')
 dbName = 'budget';
 Joi = require('@hapi/joi');
 app.use(express.json());
-let mongoURL = 'mongodb+srv://tamrat:TamraT43@mybudget-ajn0y.mongodb.net/budget?retryWrites=true&w=majority';
+let mongoURL = '###';
 
 mongoose.connect(mongoURL).then(()=>{
   console.log('connected with mongoose ...');

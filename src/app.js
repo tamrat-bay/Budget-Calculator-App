@@ -12,9 +12,6 @@ expensesCollection = 'Expenses'; //! make sure what you need in the module
 
 
 
-
-
-
 //?------------##Incomes##------------//
 app.get('/incomes',(req,res)=>{
     routeHelper.getRequest(res,incomesCollection);
