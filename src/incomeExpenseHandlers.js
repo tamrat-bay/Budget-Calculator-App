@@ -4,11 +4,7 @@ mongoose = require('mongoose')
 dbName = 'budget';
 Joi = require('@hapi/joi');
 app.use(express.json());
-let mongoURL = '###';
 
-mongoose.connect(mongoURL).then(()=>{
-  console.log('connected with mongoose ...');
-});
 
 const incomesExpensesSchema = new mongoose.Schema({
   description: String,
